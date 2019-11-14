@@ -1,10 +1,15 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
+    siteTitleAlt: `Gamer - The Bot For Everyone!`,
+    siteTitle: `Gamer`,
+    siteHeadline: `Gamer - The Bot For Everyone!`,
+    siteDescription: `The bot designed and developed to provide the best experience for game developers and gamers on Discord.`,
+    siteImage: `/banner.jpg`,
+    author: `@IGNSkillz4Killz`
   },
   plugins: [
     {
@@ -21,9 +26,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Emma - @lekoarts/gatsby-theme-emma`,
-        short_name: `Emma`,
-        description: `Minimalistic bright portfolio with full-width grid and large images`,
+        name: `Gamer - The Bot For Everyone!`,
+        short_name: `Gamer`,
+        description: `The bot designed and developed to provide the best experience for game developers and gamers on Discord.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#b83280`,
@@ -45,4 +50,4 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
-}
+};

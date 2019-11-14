@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "emma",
-  "description": "Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images",
+  "name": "gamer",
+  "description": "The bot designed and developed to provide the best experience for game developers and gamers on Discord.",
   "version": "0.0.12",
   "author": "LekoArts <hello@lekoarts.de>",
   "license": "MIT",
