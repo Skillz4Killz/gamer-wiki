@@ -1,11 +1,415 @@
 ---
-title: "Gamer Changelog"
+title: "Changelog"
 slug: "/about"
 cover: "./mountains.jpg"
 ---
 
-# Gamer State Of The Union 2018
+# Gamer Version 4.0: Keep It Simple, Stupid
 
-Hello 
+Hello 👋, Skillz here, the creator of Gamer.
+
+2019 was a massive year for Gamer! So many things happened that I am so excited about and continues to make me excited for the future of Gamer. Gamer started out as just a hobby project and a way to learn how to code but it evolved into so much more. We hit 5,000 servers. We hit 1,000,000 users. Gamer was valued at $150,000 dollars worth 🎉. And soooo much more. Although we had our high moments, we also had some low ones.
+
+This entire update was about making Gamer simple! One of the biggest mistakes I have made in Gamer, in the past was just adding every feature request users were making without considering the massive effects it was having on the overall project. The bigger Gamer got the harder it became for users to understand how to use the bot. With this update, Gamer has become simpler, faster, cleaner and most of all stable.
+
+## Changes
+
+**Ping Command:**
+
+No more massive embed just for typing `.ping`. Clean, simple and to the point. 💃
+
+**Invite Command:**
+
+The invite command will now provide a direct link to invite the bot and an invite to the support server should you need help setting it up once you invite it❣️
+
+**Gif Command:**
+
+The `.gif` command is a new fun command that will allow you to be able to search up any fun gif/meme anytime.
+
+⚠️ Note that since this allows you to search up anything, we are only allowing this to be used in NSFW channels.
+
+**User Command:**
+
+Only 1 user is allowed per command use now. You can no longer do .user @user @user To get both you need to run the command twice.
+
+**AFK Command:**
+
+AFK Messages will always self-delete after 10 seconds from now on.
+
+**Setlanguage Command:**
+
+Use the setlanguage command to set a language on your server. Please note that translations are still underway so everything might not be fully translated in your language of choice. To help translate please @ me in support server.
+```
+.setlanguage english
+.setlanguage french
+.setlanguage german
+```
+
+### Verification System
+
+**Verify Command:**
+
+The verification command has been enhanced greatly. As always it is important to keep a few things in mind in relation to this command.
+- Member joins a server
+- They are automatically given the verify role which prevents them from seeing any channel.
+- Then they are able to go through the verification process.
+- When the user types .verify end a captcha will appear that they must respond the correct answer.
+- If the user types the correct code, they will have the verify role removed.
+
+By default, we support Discord's internal Verification. We do NOT assign the auto-role automatically unless you disable this option. By giving a role, users do not need to verify their emails or wait 10 minutes or verify their phones to access your server. Most bots break this security feature. By default, gamer will wait until the user has PROVEN to discord and gamer without a doubt that it passes the Internal Discord Verification it will assign them the autorole.
+
+**Setverify Command:**
+
+The setverify command will be able to be used to create and edit any of the verification settings going forward. Always make sure to do `.setverify setup` to setup the entire verification system. This is important as it will create the verify role and modify all channel permissions for this role.
+
+```
+.setverify enable
+.setverify disable
+.setverify role @role
+.setverify message { the json code for the first message }
+.setverify internal ~ Enables/Disables the internal Discord Verification. SEE WARNING BELOW!
+```
+⚠️ WARNING ⚠️: Disabling the Internal Discord Verification will assign the autorole immediately BUT it opens your server up to alt accounts/spammers and abusers of those who get kicked, banned, muted etc...
+
+### Feedback System
+
+Time and time again I would see users trying to do `.bug` or `.idea` to try and send feedback. To solve this confusion and prevent servers from having to create shortcuts just to send feedback like this we made the bug and idea commands.
+
+**Idea Command:**
+
+The idea command is used to send an idea to your server.
+
+**Bug Command:**
+
+The bug command is used to send a bug report to your server.
+
+**Setfeedback Command:**
+
+The setfeedback command will be able to be used to create and edit any of the feedback settings going forward.
+
+```
+.setfeedback idea channel #channel
+.setfeedback bugs channel #channel
+.setfeedback idea disable
+.setfeedback bugs disable
+.setfeedback idea addquestion
+.setfeedback bugs addquestion
+.setfeedback idea removequestion
+.setfeedback bugs removequestion
+.setfeedback logchannel #channel
+.setfeedback solvedchannel #channel
+.setfeedback rejectedchannel #channel
+.setfeedback solvedmessage the message you want
+.setfeedback rejectedmessage the message you want
+.setfeedback setup ALWAYS USE THIS FIRST TO AUTOMATICALLY SETUP THE SYSTEM BEFORE ALTERING ANY SETTINGS.
+```
+⚠️ WARNING ⚠️ Always make sure to do `.setfeedback setup` to setup the entire feedback system before you change any other settings. You only need to do this the first time you set up the feature. This is important as it will create all the necessary setup behind the scenes for you and set up proper permissions for the feedback channels.
+
+### Role Management
+
+**Public Command:**
+
+The saverole command has been renamed to the public command. There is no longer such a thing as mod-assignable roles. The only roles you need to save are the roles you want anyone able to assign to themself. Mods are able to assign any role that they Discord would normally allow them to assign. Use the public command to add or remove roles from the self assignable roles.
+```
+.public add role role role
+.public remove role role role
+```
+
+**Give Command:**
+
+Use the give command to give a role to another member
+`.give role user`
+
+**Take Command:**
+
+Use the take command to take a role from another member.
+`.take role user`
+
+**Role Command:**
+
+The role command is now reserved to be a command for the normal users to assign a role to themself. Rank is also an alias now.
+```
+.rank role
+.role Role
+```
+
+### Automoderation feature
+
+When a user gets automoderated, they will also lose some XP now. (If they lose enough XP they can also lose the level role rewards)
+
+**Setprofanity Command:**
+
+Use the setprofanity command to manage the profanity filter.
+```
+.setprofanity enable
+.setprofanity disable
+.setprofanity add word
+.setprofanity remove word
+.setprofanity strict add word
+.setprofanity strict remove word
+```
+
+**Setcapital Command:**
+
+Use this command to manage the capital spam filter
+```
+.setcapital enable
+.setcapital disable
+.setcapital #
+```
+
+**Setwhitelisted Command:**
+
+Use this command to manage the url/link filter
+```
+.setwhitelisted enable
+.setwhitelisted disable
+.setwhitelisted user @user
+.setwhitelisted role @role
+.setwhitelisted channel #channel
+.setwhitelisted url https://gamer.netlify.com/
+```
+
+### Leveling feature
+
+1. You can lose XP from certain actions like being automoderated filters, or moderation commands like .mute or .warn
+2. If you go inactive for X days u begin losing XP daily.
+3. You can buy XP Boosts with some XP. Example 100 xp cost to buy a 30 minute 5x XP booster. For 30 minutes u can gain 5x XP.
+4. Complete Daily missions to get XP. for example: Hug 5 people to get 25 XP. Change your background on your profile to earn 50 XP. etc... New missions every day.
+5. Voice Leaderboards: A separate leaderboard for voice channels.
+
+
+**Daily Command:**
+
+The daily command will give you 10 Gamer Coins. You will also get 10XP in the guilds leaderboard and the global leaderboard. Reach out and give some feedback if you think we should also grant a short 15 minute XP Booster for the daily command.
+
+`.daily`
+
+**Background Command:**
+
+The background command will no longer have menus and spam the channels with all the options to choose a background. Backgrounds was rebuilt to make it much more performance friendly to help cut down costs. I have also removed all existing backgrounds and we will be starting out fresh with new and amazing backgrounds that our VIPs request. To request a background become a Nitro Booster!
+
+```
+.background set 1 black
+.background set 1 white
+.background view 1 black
+.background view 1 white
+```
+
+**Leaderboard Command:**
+
+The leaderboard command will now also come packed to show you some nice voice leaderboards.
+
+```
+.leaderboard
+.leaderboard @user
+.leaderboard global
+.leaderboard @user global
+.leaderboard voice
+.leaderboard @user voice
+```
+
+**Levelrole Command:**
+
+The levelrole command can be used to create and manage the role rewards for each level.
+
+```
+.levelrole create @role
+.levelrole add 1 @role
+.levelrole remove 1 @role
+```
+
+**Profile Command:**
+
+The profile command will be loading much much faster. It will also be used to display your XP Booster details.
+XP:
+
+The xp command is used to give or remove xp from another user.
+```
+.xp add 50 @user
+.xp remove 50 @user
+```
+
+**XPreset Command:**
+
+The xpreset command is used to reset the xp for anyone, everyone in a role or everyone in the server.
+```
+.xpreset
+.xpreset @role
+.xpreset @member
+```
+
+**Boostme Command:**
+
+The boostme command is used to buy/activate a XP Booster. Note, you can only have 1 active boost at any given time.
+
+If you have boosts already, it will active the first one in the list. If you don't have any boosts it will spend 100 XP to unlock a 30 minute 5x XP booster on any server.
+
+Missions will be randomly selected every day so don't miss out on your chance to unlock more XP! Got fun ideas for missions? Send them in with the .idea command in our support server.
+
+### Events Feature
+
+The events feature got a massive revamp. Literally from the ground up it was rethought and rebuilt.
+
+**Eventcreate Command:**
+
+The event create command allows you to create a command. First, all the menu system has been removed. This was a hold up and slowed down the feature a lot and also brought on most of the bugs/issues we had with the events feature. Removing this and also enhancements in other areas has made creating events nearly instant as compared to before where it would take nearly 5+ seconds.
+```
+.eventcreate
+.eventcreate templateName
+```
+
+**Eventshow Command:**
+
+The eventshow command will show the details about the command as before. However, some things you will notice will be how the start time of the event will be displayed in the footer automatically showing you when the event starts in YOUR timezone. This means no more need to have issues with figuring out what timezone is needed for what event. It also means the entire timezone setting can be removed from all of gamer and that removes some massive dependencies make the bot a lot smaller, leaner, and faster.
+
+`.eventshow #`
+
+**Eventadvertise Command:**
+
+The eventadvertise command used to be really slow and janky because we had to do one of two things either create and manage our own CDN or upload the images to a image hosting platform. Ive built a custom workaround for this using Discord because I LOVE discord! This will make it so much faster and better to handle advertisements. Something you will notice right away is that old event cards will NOT remove themself. The message will simply be edited now since we no longer use file attachments. WOOT! No more spamming new advertisements whenever you make the tiniest of changes to an event.  :scream_cat:
+
+The time has been removed from the event card and moved into the footer.
+
+`.eventadvertise #`
+
+**Events Command:**
+
+The events command will show the events that are currently made on the server. It is a simple overview of all events.
+
+`.events`
+
+**Eventdelete Command:**
+
+The event delete command will allow you to delete an event.
+
+`.eventdelete #`
+
+**Eventjoin Command:**
+
+Use this to join a event.
+
+`.eventjoin #`
+
+**Eventleave Command:**
+
+Use this to leave an event
+
+`.eventleave #`
+
+**Eventkick Command:**
+Use this command to kick out another member from an event
+
+`.eventkick # @user`
+
+**Eventdeny Command:**
+
+Use this command to deny participation in an event.
+
+`.eventdeny #`
+
+**Eventadd Command:**
+
+Use this command to add a user/role to an event
+```
+.eventadd # @user
+.eventadd # @role
+```
+
+**Eventedit Command:**
+
+This command allows you to edit any and all settings for the events.
+```
+.eventedit # title my new title
+.eventedit # platform my new platform
+.eventedit # game my new game
+.eventedit # activity my new activity
+.eventedit # description my new description
+.eventedit # tags gamer4life
+.eventedit # background url
+.eventedit # attendees #
+.eventedit # repeat
+.eventedit # remove
+.eventedit # dm
+.eventedit # reminder 10m
+.eventedit # frequency 30m
+.eventedit # duration 30m
+.eventedit # start 1h
+.eventedit # alertrole @role
+.eventedit # allowedrole @role
+.eventedit # template templateName
+.eventedit # showattendees
+```
+
+## Removed
+
+In gamers growth phase from 1.0 -> 3.0, we just tacked on setting after setting without thinking about how difficult and complex setting up the bot was becoming for our users. Because of this after doing a comprehensive review, I have taken a lot of the settings and set up the very best defaults that everyone was wanting for those settings. Also a lot of settings were just redundant that could be inferred from another setting so those have been removed to making gamer smarter to think and figure out the setting you wish based on your choices for other settings.
+
+❌ Delete Notification
+
+❌ Delete Notifications Time
+
+❌ Mail permission to reply
+
+❌ Admin IDs is now done through a Admin Role.
+
+❌ Military Time Format
+
+❌ Afk messages permission to post
+
+❌ Stories settings
+
+❌ Tags creation permission
+
+❌ Tags usage permission
+
+❌ Tags trigger deletion permission
+
+❌ Tags mail templates
+
+❌ Muted Voice being removed in favor of a singular Mute
+role setting
+
+❌ Disable Mod Punish Leveling
+
+❌ All server logs will use 1 setting for Ignored Roles
+and Ignored Channels as opposed to you having to set up 30 different ones
+
+❌ Modlog colors options.
+
+❌ Delete Trigger Commands
+
+❌ Feedback now has 1 log channel
+
+❌ Feedback now has 1 solved channel
+
+❌ Feedback now has 1 rejected channel
+
+❌ Feedback now has 1 solved message
+
+❌ Feedback now has 1 rejected message
+
+❌ Feedback emojis will no longer support default discord
+emojis. They must be in the emoji database using the emoji command
+
+❌ Feedback color
+
+❌ Feedback xp per reaction type
+
+❌ Events advertise on creation option
+
+❌ Events permission needed to create option
+
+❌ All survey settings
+
+## Commands Removed
+
+❌ `.cuddle` was too similar to hug. You can now use `.gif cuddle` if you wish.
+
+❌ `.feedback dev` is being removed as users continued to use it to try and communicate with the game developers. The purpose of this command was meant for sending feedback for the development of the bot. From now on, just join the gamer bot server and use the idea or bug command to achieve the same result.
+
+## Bug Fixes
+
+✅ The userimage command was not showing gifs properly. It will now.
 
 
