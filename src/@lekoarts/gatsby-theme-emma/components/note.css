@@ -1,0 +1,26 @@
+.alert {
+  background-color: rgb(228, 90, 4);
+  margin: 32px 0px;
+  padding: 10px;
+  border-left: 5px solid;
+  border-radius: 3px;
+  border-color: rgb(56, 209, 255);
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.alert-command {
+  background-color: rgb(4, 228, 224);
+  border-color: rgb(56, 209, 255);
+}
+
+.alert-note {
+  background-color: rgb(178, 168, 162);
+  border-color: rgb(97, 254, 6);
+}
+
+.alert-advanced {
+  background-color: rgb(163, 98, 58);
+  border-color: rgb(17, 159, 199);
+}

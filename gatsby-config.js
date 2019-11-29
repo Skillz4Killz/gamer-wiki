@@ -16,12 +16,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-emma`,
       options: {},
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,

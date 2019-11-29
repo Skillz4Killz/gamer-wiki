@@ -1,15 +1,17 @@
 ---
-client: 'Gamer Feedback Guide'
-title: 'Bug Reports/Suggestions Feature'
-cover: './feedback.png'
-date: '2019-10-18'
-service: 'A guide to creating the perfect feedback feature for your server.'
-color: '#f1803b'
+client: "Gamer Feedback Guide"
+title: "Bug Reports/Suggestions Feature"
+cover: "./feedback.png"
+date: "2019-10-18"
+service: "A guide to creating the perfect feedback feature for your server."
+color: "#f1803b"
 ---
+
+import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
 
 # What is Feedback Feature useful for?
 
-Aren't you tired of seeing users give feedback that is not useful like. `chat is broken.` Would you not prefer better detailed feedback?
+Aren't you tired of seeing users give feedback that is not useful like: "chat is broken." Wouldn't you prefer detailed feedback?
 
 - ✅ Get detailed bug reports and suggestions from users.
 - ✅ Have users answer specific questions for each feedback sent.
@@ -20,8 +22,6 @@ Aren't you tired of seeing users give feedback that is not useful like. `chat is
 - ✅ Users can easily submit feedback.
 - ✅ Reward users for good feedback.
 
-![screen_shot_2019-08-14_at_9.59.37_pm.png](/feedback.png)
-
 The feedback feature is the perfect feature when you want to collect suggestions or bug reports from your users. One of the most crucial things for any gaming server, is about collecting the best feedback that can be logged internally for game developers. With this in mind, we created a flexible and customizable feedback feature that provides the best experience for not just developers but users as well for sending feedback.
 
 Sound good to you? Well, let's set it up then!
@@ -30,27 +30,36 @@ Sound good to you? Well, let's set it up then!
 
 Let's go ahead and get started.
 
-Go into your server settings and make sure that the Gamer role has Administrator Permissions. If this is done, you can proceed:
+Go into your server settings and make sure that the Gamer role has **Administrator** Permissions. If this is done, you can proceed:
 
-`.setup feedback`
+<Note type="command">.setfeedback setup</Note>
 
-Now let's understand what just happened.
+- Creates channels for suggestions and bug reports.
+- Enable all feedback settings with default settings.
+- Sends an example of what each type of feedback looks like.
 
-This command created a base feedback feature. First, it creates a channel for suggestions and another channel bug reports. Then, it will update all the feedback settings so that it is enabled with the default settings. Lastly, it sends in each channel a base example of what each type of feedback looks like.
+<Note type="note">After setup, you should remove the Administrator permissions.</Note>
 
-> **Note:** After setup, you can remove the Administrator permissions.
-> {.is-warning}
+Now, take a minute to try testing out how the feedback works.
 
-Go ahead and take a minute to try testing out how the feedback works.
+<Note type="command">
+  .idea <br />
+  .bug
+</Note>
 
-`.feedback idea` will begin the Q&A session with the bot asking you the questions to send for the feedback. Once you answer all of them, a new feedback will be sent in the idea channel.
-`.feedback bug` will begin a similar session but asking the questions for a bug report. Once complete, it will send a new bug report in the bugs channel.
+`.idea` will begin the Q&A session with the bot asking you the questions to send for the feedback. Once you answer all of them, a new feedback will be sent in the idea channel.
+
+`.bug` will begin a similar session but asking the questions for a bug report. Once complete, it will send a new bug report in the bugs channel.
+
+<Note type="advanced">
+  If you know all the questions, you can split your answers with | and it will work as well. As an example:
+  <br />
+  <br />
+  .fb idea I would suggest checking out the g4m3r server and website to learn all my other features and everything you can
+  unlock. | High
+</Note>
 
 Cool right? Sweet, now that you have the hang of this, let's try and customize this.
-
-> **Advanced:** If you know all the questions, you can split your answers with | and it will work as well. As an example:
-> `.fb idea I would suggest checking out the g4m3r server and website to learn all my other features and everything you can unlock. | High`
-> {.is-success}
 
 # Customizing The Questions
 
