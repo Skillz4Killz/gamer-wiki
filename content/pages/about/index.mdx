@@ -8,9 +8,13 @@ cover: "./mountains.jpg"
 
 Hello 👋, Skillz here, the creator of Gamer.
 
-2019 was a massive year for Gamer! So many things happened that I am so excited about and continues to make me excited for the future of Gamer. Gamer started out as just a hobby project and a way to learn how to code but it evolved into so much more. We hit 5,000 servers. We hit 1,000,000 users. Gamer was valued at $150,000 dollars worth 🎉. And soooo much more. Although we had our high moments, we also had some low ones.
+2019 was a massive year for Gamer! So many things happened that I am so excited about and continues to make me excited for the future of Gamer. Gamer started out as just a hobby project and a way to learn how to code but it evolved into so much more. We hit 5,000 servers. We hit 1,000,000 users. Gamer was valued at \$150,000 dollars worth 🎉. And soooo much more. Although we had our high moments, we also had some low ones.
 
 This entire update was about making Gamer simple! One of the biggest mistakes I have made in Gamer, in the past was just adding every feature request users were making without considering the massive effects it was having on the overall project. The bigger Gamer got the harder it became for users to understand how to use the bot. With this update, Gamer has become simpler, faster, cleaner and most of all stable.
+
+## Saying Goodbyes
+
+Through 2018, we had amazing fun as a team and
 
 ## Changes
 
@@ -39,6 +43,7 @@ AFK Messages will always self-delete after 10 seconds from now on.
 **Setlanguage Command:**
 
 Use the setlanguage command to set a language on your server. Please note that translations are still underway so everything might not be fully translated in your language of choice. To help translate please @ me in support server.
+
 ```
 .setlanguage english
 .setlanguage french
@@ -50,6 +55,7 @@ Use the setlanguage command to set a language on your server. Please note that t
 **Verify Command:**
 
 The verification command has been enhanced greatly. As always it is important to keep a few things in mind in relation to this command.
+
 - Member joins a server
 - They are automatically given the verify role which prevents them from seeing any channel.
 - Then they are able to go through the verification process.
@@ -69,6 +75,7 @@ The setverify command will be able to be used to create and edit any of the veri
 .setverify message { the json code for the first message }
 .setverify internal ~ Enables/Disables the internal Discord Verification. SEE WARNING BELOW!
 ```
+
 ⚠️ WARNING ⚠️: Disabling the Internal Discord Verification will assign the autorole immediately BUT it opens your server up to alt accounts/spammers and abusers of those who get kicked, banned, muted etc...
 
 ### Feedback System
@@ -103,6 +110,7 @@ The setfeedback command will be able to be used to create and edit any of the fe
 .setfeedback rejectedmessage the message you want
 .setfeedback setup ALWAYS USE THIS FIRST TO AUTOMATICALLY SETUP THE SYSTEM BEFORE ALTERING ANY SETTINGS.
 ```
+
 ⚠️ WARNING ⚠️ Always make sure to do `.setfeedback setup` to setup the entire feedback system before you change any other settings. You only need to do this the first time you set up the feature. This is important as it will create all the necessary setup behind the scenes for you and set up proper permissions for the feedback channels.
 
 ### Role Management
@@ -110,6 +118,7 @@ The setfeedback command will be able to be used to create and edit any of the fe
 **Public Command:**
 
 The saverole command has been renamed to the public command. There is no longer such a thing as mod-assignable roles. The only roles you need to save are the roles you want anyone able to assign to themself. Mods are able to assign any role that they Discord would normally allow them to assign. Use the public command to add or remove roles from the self assignable roles.
+
 ```
 .public add role role role
 .public remove role role role
@@ -128,6 +137,7 @@ Use the take command to take a role from another member.
 **Role Command:**
 
 The role command is now reserved to be a command for the normal users to assign a role to themself. Rank is also an alias now.
+
 ```
 .rank role
 .role Role
@@ -140,6 +150,7 @@ When a user gets automoderated, they will also lose some XP now. (If they lose e
 **Setprofanity Command:**
 
 Use the setprofanity command to manage the profanity filter.
+
 ```
 .setprofanity enable
 .setprofanity disable
@@ -152,6 +163,7 @@ Use the setprofanity command to manage the profanity filter.
 **Setcapital Command:**
 
 Use this command to manage the capital spam filter
+
 ```
 .setcapital enable
 .setcapital disable
@@ -161,6 +173,7 @@ Use this command to manage the capital spam filter
 **Setwhitelisted Command:**
 
 Use this command to manage the url/link filter
+
 ```
 .setwhitelisted enable
 .setwhitelisted disable
@@ -177,7 +190,6 @@ Use this command to manage the url/link filter
 3. You can buy XP Boosts with some XP. Example 100 xp cost to buy a 30 minute 5x XP booster. For 30 minutes u can gain 5x XP.
 4. Complete Daily missions to get XP. for example: Hug 5 people to get 25 XP. Change your background on your profile to earn 50 XP. etc... New missions every day.
 5. Voice Leaderboards: A separate leaderboard for voice channels.
-
 
 **Daily Command:**
 
@@ -225,6 +237,7 @@ The profile command will be loading much much faster. It will also be used to di
 XP:
 
 The xp command is used to give or remove xp from another user.
+
 ```
 .xp add 50 @user
 .xp remove 50 @user
@@ -233,6 +246,7 @@ The xp command is used to give or remove xp from another user.
 **XPreset Command:**
 
 The xpreset command is used to reset the xp for anyone, everyone in a role or everyone in the server.
+
 ```
 .xpreset
 .xpreset @role
@@ -254,6 +268,7 @@ The events feature got a massive revamp. Literally from the ground up it was ret
 **Eventcreate Command:**
 
 The event create command allows you to create a command. First, all the menu system has been removed. This was a hold up and slowed down the feature a lot and also brought on most of the bugs/issues we had with the events feature. Removing this and also enhancements in other areas has made creating events nearly instant as compared to before where it would take nearly 5+ seconds.
+
 ```
 .eventcreate
 .eventcreate templateName
@@ -267,7 +282,7 @@ The eventshow command will show the details about the command as before. However
 
 **Eventadvertise Command:**
 
-The eventadvertise command used to be really slow and janky because we had to do one of two things either create and manage our own CDN or upload the images to a image hosting platform. Ive built a custom workaround for this using Discord because I LOVE discord! This will make it so much faster and better to handle advertisements. Something you will notice right away is that old event cards will NOT remove themself. The message will simply be edited now since we no longer use file attachments. WOOT! No more spamming new advertisements whenever you make the tiniest of changes to an event.  :scream_cat:
+The eventadvertise command used to be really slow and janky because we had to do one of two things either create and manage our own CDN or upload the images to a image hosting platform. Ive built a custom workaround for this using Discord because I LOVE discord! This will make it so much faster and better to handle advertisements. Something you will notice right away is that old event cards will NOT remove themself. The message will simply be edited now since we no longer use file attachments. WOOT! No more spamming new advertisements whenever you make the tiniest of changes to an event. :scream_cat:
 
 The time has been removed from the event card and moved into the footer.
 
@@ -311,6 +326,7 @@ Use this command to deny participation in an event.
 **Eventadd Command:**
 
 Use this command to add a user/role to an event
+
 ```
 .eventadd # @user
 .eventadd # @role
@@ -319,6 +335,7 @@ Use this command to add a user/role to an event
 **Eventedit Command:**
 
 This command allows you to edit any and all settings for the events.
+
 ```
 .eventedit # title my new title
 .eventedit # platform my new platform
@@ -411,5 +428,3 @@ emojis. They must be in the emoji database using the emoji command
 ## Bug Fixes
 
 ✅ The userimage command was not showing gifs properly. It will now.
-
-

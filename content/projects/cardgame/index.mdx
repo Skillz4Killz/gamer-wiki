@@ -1,0 +1,60 @@
+---
+client: "Trading Card Game"
+title: "Trading Card Game"
+cover: "./card.png"
+date: "2019-11-31"
+service: "A guide to playing the card game and creating your own card game."
+color: "#f1803b"
+---
+
+import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
+
+# What is the Trading Card Game?
+
+Text here
+
+![A Card of the AoV Module](/aovtradingcards.png)
+
+# Installing already existing modules on your server
+
+Currently there are 3 available modules:
+
+- **Arena of Valor**
+- **Mobile Legends**
+- **Rules of Survival**
+
+To install any of them, all you have to do is...
+
+#### Install the Module of the corresponding game
+
+Type `.install [gameHere]` - for example `.install aov`
+
+- This will install the module of the provided game.
+  > This can be undone later by typing `.uninstall [gameHere]`
+  > {.is-info}
+
+#### Select a Channel for the Trading Card Game
+
+1. Create a channel you would like the game to be played in
+2. Once you made one, simply run any of the following commands and replace `#channelhere` with your channel!
+
+- **Arena of Valor:** `.settings aovChannelID #channelhere`
+- **Mobile Legends:** `.settings mlbbChannelID #channelhere`
+- **Rules of Survival:** `.settings rosChannelID #channelhere`
+  > This can be undone later by typing `.reset tradingCards.aov.aovChannelID`
+  > {.is-info}
+
+> Make sure that G4M3R has permissions to read, send and manage messages in the channel you selected!
+> {.is-warning}
+
+# Adding your own Modules
+
+Guide here
+
+```js
+{ name: `CharacterName1`, image: `https://i.imgur.com/CharacterPicture1.jpg` },
+{ name: `CharacterName2`, image: `https://i.imgur.com/CharacterPicture2.jpg` },
+{ name: `CharacterName3`, image: `https://i.imgur.com/CharacterPicture3.jpg` },
+```
+
+Simply copy paste full rows per extra character you want to add. Once you're done, contact ....
