@@ -8,8 +8,9 @@ module.exports = {
     siteTitle: `Gamer`,
     siteHeadline: `Gamer - The Bot For Everyone!`,
     siteDescription: `The bot designed and developed to provide the best experience for game developers and gamers on Discord.`,
-    siteImage: `/banner.jpg`,
-    author: `@IGNSkillz4Killz`
+    siteImage: `/banner.png`,
+    author: `@IGNSkillz4Killz`,
+    siteUrl: `https://gamer.netlify.com`
   },
   plugins: [
     {
