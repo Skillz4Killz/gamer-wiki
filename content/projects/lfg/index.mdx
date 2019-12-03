@@ -7,153 +7,196 @@ service: "Looking For Groups!"
 color: "#00ffff"
 ---
 
+import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
+
 # What is LFG(Events) Feature useful for?
 
-Aren't you tired of seeing users @mention moderators or entire roles to get help causing spam and making it much harder to provide help to users.
+How many times have you found yourself opening up an excel sheet to keep track of who is attending an event and who is not? Do you use notepad? Google Docs? Challonge? Some other third party app outside of discord? Well, after today you can kiss those outdated practices goodbye! Say hello to Gamer’s **Events** feature!
 
-- ✅ Never miss a user asking for help again! Happy users increases user retention.
-- ✅ Professionally designed customer support for Discord.
-- ✅ Users get private help to anything they are concerned about. Users don't get attacked by other users for asking common basic questions.
-- ✅ Users don't @mention every person in a role when only a couple are available.
-- ✅ No longer DM one moderator waiting until that person replies. Get the fastest possible responses by easily contacting the entire staff team.
-- ✅ Template responses to send quick and detailed responses for any common questions.
-- ✅ Discord Support helps users so they don't need to email customer service saving money. 💰💰💰
+- ✅ Schedule events ahead of time so you never forget or freak out trying to announce it last minute.
+- ✅ Send reminders in DM and/or in server to everyone participating so no one forgets about the event.
+- ✅ Allow players to find other players to play with.
+- ✅ Easy signup to events with reactions.
+- ✅ Private events locked to certain roles in cases you want to make staff only events.
+- ✅ Create event templates or recurring events for easy event creation.
+- ✅ Crazy amount of customization potential to make it fit your needs!
 
-Events:  Your Built in Scheduler
+The goal of the **events **feature is to organize and schedule a gathering whether it be in real life, or on the server. It will provide you with a method of sending out pertinent information to those you want, while allowing users the ability to RSVP to the event to let you know they’ll be there (or that they can’t make it).
 
-How many times have you found yourself opening up an excel sheet to keep track of who is attending an event and who is not?  Do you use notepad? Google Docs? Challonge? Some other third party app _outside of discord?  _Well, after today you can kiss those outdated practices goodbye!  Say hell to Gamer’s **Events** feature!
+## Associated commands
 
-The goal of the **events **feature is to organize and schedule a  gathering whether it be in real life, or on the server.  It will provide you with a method of sending out pertinent information to those you want, while allowing users the ability to RSVP to the event to let you know they’ll be there (or that they can’t make it).
-
-Associated commands
-
-Creating events will require the use of several commands in the event family.  Briefly let’s go over each of them:
-
-X refers to the number of the event.  If you don’t know the number, use .events to list all events and their associated numbers
-
+The **#** refers to the ID number of the event. If you don’t know the ID, use **.events** to list all events and their associated IDs.
 
 <table>
-  <tr>
-   <td><strong>Command</strong>
-   </td>
-   <td><strong>Purpose</strong>
-   </td>
-   <td><strong>Alias</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>.events
-   </td>
-   <td>Lists all events taking place on your server
-   </td>
-   <td>.e
-   </td>
-  </tr>
-  <tr>
-   <td>.eventcreate
-   </td>
-   <td>Will create an event with all default settings
-   </td>
-   <td>.ec
-   </td>
-  </tr>
-  <tr>
-   <td>.eventadvertise X
-   </td>
-   <td>Creates the event card advertisement for the event with the corresponding event id.
-   </td>
-   <td>.ead
-   </td>
-  </tr>
-  <tr>
-   <td>.eventshow X
-   </td>
-   <td>This will show more detailed information about an event
-   </td>
-   <td>.es
-   </td>
-  </tr>
-  <tr>
-   <td>.eventdelete X
-   </td>
-   <td>Delete the event with ID X
-   </td>
-   <td>.ed
-   </td>
-  </tr>
-  <tr>
-   <td>.eventadd / .eventkick X User/Role
-   </td>
-   <td>Adds(.eventadd) or removes(.eventkick) a @user or @role to an event with ID X
-   </td>
-   <td>.eadd / .ek
-   </td>
-  </tr>
-  <tr>
-   <td>.eventjoin /.eventdeny X
-   </td>
-   <td>RSVP positively (.eventjoin) or negatively (.eventdeny) to an event with ID X.  <strong>Note:</strong>  Deny can be used to remove yourself from an event even if you’ve joined it already.
-   </td>
-   <td>.ejoin or .edeny.
-   </td>
-  </tr>
-  <tr>
-   <td>.eventedit X (category)
-   </td>
-   <td>The bread and butter of event creation, use this along with the categories shown in .eventshow to tailor your event to your specific needs! (we’ll go into more detail soon)
-   </td>
-   <td>.ee
-   </td>
-  </tr>
+ <tr>
+  <td><strong>Command</strong>
+  </td>
+  <td><strong>Purpose</strong>
+  </td>
+  <td><strong>Alias</strong>
+  </td>
+ </tr>
+ <tr>
+  <td>.events
+  </td>
+  <td>Lists all events taking place on your server
+  </td>
+  <td>.e
+  </td>
+ </tr>
+ <tr>
+  <td>.eventcreate
+  </td>
+  <td>Will create an event with all default settings
+  </td>
+  <td>.ec
+  </td>
+ </tr>
+ <tr>
+  <td>.eventadvertise #
+  </td>
+  <td>Creates the event card advertisement for the event with the corresponding event id.
+  </td>
+  <td>.ead
+  </td>
+ </tr>
+ <tr>
+  <td>.eventshow #
+  </td>
+  <td>This will show more detailed information about an event
+  </td>
+  <td>.es
+  </td>
+ </tr>
+ <tr>
+  <td>.eventdelete #
+  </td>
+  <td>Delete the event with ID #
+  </td>
+  <td>.ed
+  </td>
+ </tr>
+ <tr>
+  <td>.eventadd # User/Role
+  </td>
+  <td>Adds a @user or all users with the @role to an event with ID #
+  </td>
+  <td>.eadd
+  </td>
+ </tr>
+ <tr>
+  <td>.eventkick # User
+  </td>
+  <td>Removes a @user from the event.
+  </td>
+  <td>.ek
+  </td>
+ </tr>
+ <tr>
+  <td>.eventedit # (category)
+  </td>
+  <td>Tailor your event to your specific needs!
+  </td>
+  <td>.ee
+  </td>
+ </tr>
 </table>
 
+## Making Your First Event
 
-Making Your First Event
+Once you are ready to create an event, you can go ahead and use the following command.
 
-To make your first event simply type `.ec` or `.eventcreate.  `That’s it!  The bot will now automatically list the default settings for your event.
+<Note type="command">.eventcreate</Note>
 
-![alt_text](images/Your-Built0.png "image_tooltip")
+Tada! Your very first event was just created. Gamer automatically uses the default event settings for this event, so let's go ahead and customize the event.
 
-Title and Description
+<Note type="note">Make sure to remember the ID number that Gamer just gave your for this event.</Note>
 
-Now we will want to edit the event using the` .ee` command coupled with our ID (in my case ID = 2) and then the various parts of the event.  First up we will want to change the title of the event.  To do so type` .ee 2 Title Here's a Brand New Title!  `Note that where I will give examples using my event ID, you would substitute in your own information from your event info.  Under the title is the Description.  Currently it reads “Join the event to let others know you will eb able to play with them at the time of the event”.  Let’s change it to something more colorful!  `.ee 2 Description If You Join it, They will come`
+### Title and Description
 
-Not only will this change the information in front of you, but it will also change the information on your card, which you can see using the `.ead` command.  Just be careful as once you advertise an event in a channel, you will be unable to advertise it again in that same channel so pin it if you need to, it’ll update in real time.
+Suppose we wanted to change the title of the event.
 
+<Note type="command">.eventedit 1 title Here's a Brand New Title!</Note>
 
-![alt_text](images/Your-Built1.png "image_tooltip")
+<Note type="note">I will give examples using my event ID for my event, you would substitute in your own event's ID number.</Note>
 
+Under the title is the Description. Currently it reads “Join the event to let others know you will eb able to play with them at the time of the event”. Let’s change it to something more colorful!
 
-Event Timing
+<Note type="command">.eventedit 1 description If You Join it, They will come!</Note>
 
-Next to change is the Duration.  By now I hope you’re getting the idea! We’re going to change duration by typing `.ee 2 Duration 2h` or 3h or 1w or however long your event is going to go for.
+Not only will this change the information in front of you, but it will also change the information on your event card.
 
-You can set your event’s start time using` .ee 2 Start 18h` which will set the event to start 18h from now.  The start time is always calculated from your current time.  This was changed to not have to deal with time zones.  It’s easiest to use hours and convert accordingly - 1w2h will not work, but 170h will.
+<Note type="command">.eventadvertise</Note>
 
-RSVP
+<Note type="note">Event cards update in real time. This means whenever you edit other things in the event, the card will reflect that. I recommend using this command in a different chanel than where you use the commands.</Note>
 
- Your users can click the Green checkmark or the Red X on the event card that is shown when you type `.ead 2` to RSVP.  Alternatively, they can use `.eventjoin 2` to join, or` .eventdeny 2` to leave or decline the event.  You can manually add entire roles or users using `.eventadd 2 @Aikage` to add me (ok, or anyone).  If you have some annoying guy who joins your event but you don’t want him there (OK, I get the hint), you can manually remove people from events using `.eventkick 2 @Aikage. `It’s worthwhile to note that you  can add entire roles to an event so if you know which two teams are supposed to come to next week’s fortnite tournament, you can add them via role using `.eventadd 2 @team 1 @team2 `
+### Event Timing
 
-You can change the number of people allowed to attend the event using` .ee 2 attendees 10 `or 20 or 30, however many maximum users you want!
+Time values requires a number and then one of the time characters. The following time characters are allowed.
 
-Gaming
+- **W** = Used to represent weeks
+- **D** = Used to represent days
+- **H** = Used to represent hours
+- **M** = Used to represent minutes
 
-Platform will change the which venue that the event is being hosted on.  This is freeform so you can type “kitchen table” if you so desire.  You’re not locked into the big 4 consoles/pc.  I’ll change this to PC for now by typing `.ee 2 platform PC`
+For example:
 
-Game is fairly self explanatory - what are you playing!?  I’m going to play tabletop simulator with my friends so I type `.ee 2 game tabletop sim.
-`Activity is a sort of “extra box” for you to provide more information surrounding your event and the activity.  Is it tournament round 1? Super Smash casual night?  Since i’ll be playing Gloomhaven I’ll use this box to denote the current mission we’re on by typing `.ee 2 activity mission 10.`
+- 3d = Three day.
+- 12h = 12 hours.
+- 1w = One week.
+- 120m = 120 minutes or 2 hours.
 
+#### Duration
 
+Now let's try and update the duration of the event. Let's change the duration of the event to last for 2 hours.
 
-More
+<Note type="command">.eventedit 1 duration 2h</Note>
 
+#### Start Time
 
-![alt_text](images/Your-Built2.png "image_tooltip")
+By default, events will always start 1 hour from when the command to create the event was used. Let's set up our own start time so the event starts in 18 hours from now.
 
+<Note type="command">.eventedit 1 start 18h</Note>
 
-This guide covers the basics to get you started  making events but there are many more features to change as shown above.  Most are self explanatory but further updates will flesh out each of these features.  If you want to know more or are confused make sure to ask in our #support channel!
+The start time is always calculated from your current time. This was changed to not have to deal with time zones. It’s easiest to use hours and convert accordingly - 1w2h will not work, but 170h will.
 
-Advertising
+<Note type="note">Currently, advanced times such as 1w2h do not work. In a future update, we will add support for this. Currently, you must add up the time in a different format such as 170h.</Note>
 
-So we’re ready to show the world our event!  It’s suggested you have a separate channel to advertise in, but you could always pin it if you don’t want to do so.  Use `.ead 2` to advertise your event in the current channel.  That’s it!  Now your users can view and respond to the event!
+### RSVP
 
+#### Adding/Joining/Denying
+Once the event is created and the event card is created, users can join the event anytime. Users can tap the ✅ reaction or the ❌ on the event card.
+
+<Note type="note">Alternatively, they can use .eventjoin 1 to join, or .eventdeny 1 to leave or decline the event.</Note>
+
+You can manually add entire roles or users using **eventadd** command. For example, imagine you wanted to invite two teams to an event for their upcoming tournament match.
+
+<Note type="command">.eventadd 1 @Aikage <br /> .eventadd 1 @team1 @team2</Note>
+
+#### Removing/Kicking
+
+If you need to remove someone from the event for whatever reason:
+
+<Note type="command">.eventkick 1 @Aikage</Note>
+
+#### Max Attendees Limit
+
+You can change the number of people allowed to attend the event. For example, if we wanted to make a 5v5 event we only need a maximum of 10 members.
+
+<Note type="command">.eventedit 1 attendees 10</Note>
+
+### Gaming
+
+All three of the below options are freeform so you can type anything you like. For example, you could set the "kitchen table" as the platform if you so desired.
+
+Platform will change which venue that the event is being hosted on. I’ll change this to PC for now.
+
+Game is fairly self explanatory - what are you playing!? I’m going to play tabletop simulator with my friends.
+
+Activity is a sort of “extra box” for you to provide more information surrounding your event and the activity. Is it tournament round 1? Super Smash casual night? Since i’ll be playing Gloomhaven I’ll use this box to denote the current mission we’re on.
+
+<Note type="command">.eventedit 1 platform PC <br />.eventedit 1 game tabletop sim <br />.eventedit 1 activity mission 10</Note>
+
+### More
+
+This guide covers the basics to get you started making events but there are many more features to change as shown above. Most are self explanatory but further updates will flesh out each of these features. If you want to know more or are confused make sure to ask in our #support channel!
