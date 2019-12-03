@@ -4,7 +4,7 @@ title: "Leveling Feature"
 cover: "./leveling.png"
 date: "2019-12-01"
 service: "A guide to creating the best leveling grind game ever on your server."
-color: "#f1803b"
+color: "#ff99ff"
 ---
 
 import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
@@ -32,118 +32,82 @@ One of the best use cases we have seen for this feature was to use the leveling 
 
 Sound good to you? Well, let's set it up then!
 
-![Feature Pic]('./leveling.png')
-
 # Setting Up The Feedback Feature
 
-Let's go ahead and get started.
+The leveling feature is built as a core part of Gamer that there is no setup required. Everything is enabled by default as soon as the bot joins the server. There is one thing to customize and enhance the module for your server.
 
-Go into your server settings and make sure that the Gamer role has **Administrator** Permissions. If this is done, you can proceed:
-
-<Note type="command">.setfeedback setup</Note>
-
-- Creates channels for suggestions and bug reports.
-- Enable all feedback settings with default settings.
-- Sends an example of what each type of feedback looks like.
-
-<Note type="note">After setup, you should remove the Administrator permissions.</Note>
-
-Now, take a minute to try testing out how the feedback works.
+The only part of the leveling module that needs customizing is the role rewards. When a user reaches a certain level we want them to gain that reward. Don't worry if that user gets punished and loses XP they can also lose that role reward.
 
 <Note type="command">
-  .idea <br />
-  .bug
+  .levelrole create 3 @Member** ~ Gives a role when the user achieves this level. <br />
+  .levelrole create 5 @Elder** ~ Gives a role when the user achieves this level. <br />
+  .levelrole create 10 @Veteran** ~ Gives a role when the user achieves this level.
 </Note>
 
-`.idea` will begin the Q&A session with the bot asking you the questions to send for the feedback. Once you answer all of them, a new feedback will be sent in the idea channel.
+Now whenever, someone reaches one of those levels they will earn that level's roles rewards.
 
-`.bug` will begin a similar session but asking the questions for a bug report. Once complete, it will send a new bug report in the bugs channel.
+# Customizing The Background
 
-<Note type="advanced">
-  If you know all the questions, you can split your answers with | and it will work as well. As an example:
-  <br />
-  <br />
-  .fb idea I would suggest checking out the g4m3r server and website to learn all my other features and everything you can
-  unlock. | High
-</Note>
+By default, every user will begin with the default background. You can use the **.background view** command to see how your profile will look in other backgrounds and themes. You can also use the **.background set** command to set your own background settings.
 
-Cool right? Sweet, now that you have the hang of this, let's try and customize this.
+<Note type="command">.help background</Note>
 
-# Customizing The Questions
+Current Available Backgrounds:
 
-Every game has different needs and each feedback is extremely crucial to get the right information from a user. In order to perfect that, we allowed users to have the ability to customize the questions.
+1 = Shop Titans
 
-Now you can take a moment and pause here to come up with a list of questions you wants users to answer. Once you are ready, you can proceed and see how we add those questions.
+2 = BattleField One Assault
 
-For example, suppose you wanted to create the following questions for your bug reports.
+3 = unOrdinary
 
-- What is the account name, IGN, that experienced the bug?
-- What is the server where the bug occurred? NA, EU, SEA, EA, SA, CN
-- What device did the bug happen on? Phone + Phone Model, iPhone X, Samsung Galaxy Note 8, etc.
-- What's the OS version of your device? Example: iOS 12.1, Android 8.0, Windows 10.
-- Describe the bug as well as you can.
-- How consistently are you able to reproduce this bug by following all the steps to reproduce above? From 1-100%
-- Include any other information you find useful here, such as uploading a screenshot of the bug.
+# How To Gain XP
 
-Now let's type:
-`.setfeedback bugs addquestion What is the account name, IGN, that experienced the bug?`
+XP can be gained in several ways in the Gamer leveling module. The simplest method is just being active in the server. Everytime you send a message on the server you can gain XP. However, there is a cooldown so a user doesn't spam messages for XP. Using commands is also another form of gaining XP. Certain commands can give you more XP because the usage of these commands help support the costs for Gamer. XP commands are never allowed to be from admin/mod commands. The goal is to keep it fair so only commands that anyone can use grant some XP. There is also a cooldown on Command Usage XP to prevent spamming.
 
-You can use `idea` instead of `bugs` for adding/removing questions related to sending an idea.
+You can also gain XP by sending good feedback to the server. When a user gives you the like reaction, you will gain 3 XP. When a server mod/admin approves your feedback, you will gain 50 XP. Warning: If you send bad feedback, you can actually lose the same amount of feedback.
 
-Go ahead and repeat this command for each of the questions above. Once you are done, it is time to remove the original 2 questions that the `.setup` command created originally. To do that just type the following 2 commands:
+Another way to gain XP is by completing missions. 3 new missions will appear every 6 hours. You can check the current missions and your progress on the missions with the **.profile** command. Once you complete a mission, a ✅ will appear next to it. Go ahead and let your friends know when the missions are live as well, so you can have a healthy competition. Fair warning, the missions XP can only be earned in ONE server. So make sure to complete the missions on your favorite server!
 
-```shell
-.settings bugsQuestions What is the issue you are having?
-.settings bugsQuestions Can you provide some links to screenshots please?
-```
+Can you find the other cool ways to gain XP?
 
-Tada! :tada: We now have a fully custom built feedback for bugs. Take some time and customize the questions for the idea feedback type.
+# Boosting
 
-<Note type="note">The image attachment questions should always be reserved for the last question.</Note>
+Are you boosted? Am I boosted? Why can't we all be boosted!
 
-# Understanding The Reactions
+Boosting is a new concept that we created in the Gamer leveling module to encourage users to chat more. By default, every user can spend 100 Global XP to earn a 5 times XP booster for 30 minutes. This feature, encourages users to spend atleast 30 minutes in your server, otherwise they would lose XP.
 
-The reactions that are added to feedback allow users and moderators to have quick access to various parts of the feedback feature. Let's break it down:
+<Note type="command">.boostme</Note>
 
-## Voting Reactions
+In the future, we will make it so that mods/admins can also gift boosters to the members as a reward for good behavior and such. At the moment, we want to see how this version of boosting works. We will keep an eye on it!
 
-Any user can react with these and give XP to a user. You can also remove the reaction and the XP is then removed. The XP is a perfect addition to the feedback feature because it gives users an incentive to be send good feedback. The amount of XP can be customized in detail. We will discuss this in the XP section below.
+Boosting works on all types of XP. Missions, commands, messages, feedback, etc...
 
-👍 : Whenever anyone reacts to this, it will **give** the original sender XP. Removing this reaction, **removes** that XP.
+# Leaderboards
 
-👎 : Whenever anyone reacts to this, it will **remove** the original sender's XP. Removing this reaction, **gives** that XP back.
-
-❓: This reaction has no effect but was added for users when they are not sure whether to vote up or down.
-
-## Mod Only Reactions
-
-The functionality for these reactions will only work for Moderators or Admins.
-
-📬 : When a moderator reacts to this, a new Mail will be opened on behalf of the original sender. This is useful for easily contacting the sender when you need more information regarding the feedback.
-✅ : This reaction has 3 affects to it. First, it will mark the feedback as solved and delete it from the channel. Second, it will send a Direct Message to the original sender letting them know it will solved. Third it grants them bonus XP as well.
-❌ : This reaction has 3 affects to it as well. It marks the feedback as denied and deletes it from the channel. Second, it will send a message to the user letting them know it was denied. Third, it removes XP from the user.
-
-# Feedback Logs
-
-When a feedback is reacted to with the solved or denied reactions, it gets removed. For this purpose, gamer also provides a log feature for the feedback.
+Gaining XP is great, but the best part is about seeing if you are #1 or how far you are from the people near your rank. To do this, we created a beautiful leaderboard command to show you the top 3 players and how far you are from the person above you in rank.
 
 <Note type="command">
-  .setfeedback solvedchannel #channel ~ Sets the channel to send any feedback that was reacted with ✅. <br />
-  .setfeedback rejectedchannel #channel ~ Sets the channel to send any feedback that was reacted with ❌.
-</Note>
-<Note type="note">
-  It is recommended to keep these channels private from public. Usually, they are used for discussing feedback
-  internally if needed.
+.leaderboard <br/>
+.leaderboard global <br/>
+.leaderboard voice
 </Note>
 
-# Exporting Feedback
+In order to check the the position of your friend, just do the same commands as above and then at the end @user.
 
-Sometimes game developers have different internal tools that they use to track and work with feedback. To make it easy to transfer the feedback from discord to an external source we created the `.export` command.
+# Moderation
 
-This command converts feedback into a **CSV** file which can be easily uploaded to a google spreadsheet or converted into anything you like.
+Mods/Admins have special access to 2 XP related commands. The **.xp** command can be used to add or remove XP from a user. The **.xpreset** is a dangerous command that resets the XP of the entire server, everyone in a role or just one user.
 
-To use this command, you find the message ID of the feedback you want to **START** at. All feedback found after this feedback will be exported into a CSV file. A maximum of 100 feedback can be exported at any time due to discord rate limits.
 
-# Further Customizations
+<Note type="command">
+.xpreset <br/>
+.xpreset @user <br/>
+.xpreset @role
+</Note>
 
-There are a lot more ways you can customize the feedback module. To see all the options you can type `.settings feedback`.
+<Note type="command">
+.xp add 50 @user <br/>
+.xp remove 50 @user <br/>
+</Note>
+
+A good team of moderators can take advantage of these commands to make the server a truly amazing place for a discord. Some great teams can even help make $ profits for the game.
