@@ -16,7 +16,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@lekoarts/gatsby-theme-emma": "^1.0.15",
+    "@lekoarts/gatsby-theme-emma": "^1.1.1",
     "gatsby": "^2.18.5",
     "gatsby-plugin-manifest": "^2.2.30",
     "gatsby-plugin-mdx": "^1.0.58",

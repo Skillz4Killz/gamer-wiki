@@ -10,7 +10,6 @@ module.exports = {
     siteDescription: `The bot designed and developed to provide the best experience for game developers and gamers on Discord.`,
     siteImage: `/banner.png`,
     author: `@IGNSkillz4Killz`,
-    siteUrl: `https://gamer.netlify.com`
   },
   plugins: [
     {
