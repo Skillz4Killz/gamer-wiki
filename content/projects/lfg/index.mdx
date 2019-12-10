@@ -145,6 +145,7 @@ For example:
 - 12h = 12 hours.
 - 1w = One week.
 - 120m = 120 minutes or 2 hours.
+- 1w2h = One Week and 2 Hours.
 
 #### Duration
 
@@ -158,9 +159,7 @@ By default, events will always start 1 hour from when the command to create the 
 
 <Note type="command">.eventedit 1 start 18h</Note>
 
-The start time is always calculated from your current time. This was changed to not have to deal with time zones. It’s easiest to use hours and convert accordingly - 1w2h will not work, but 170h will.
-
-<Note type="note">Currently, advanced times such as 1w2h do not work. In a future update, we will add support for this. Currently, you must add up the time in a different format such as 170h.</Note>
+The start time is always calculated from your current time. This was changed to not have to deal with time zones. It’s easiest to use hours and convert accordingly. You can do something like 1h9m. Or 1d13h5m.
 
 ### RSVP
 
