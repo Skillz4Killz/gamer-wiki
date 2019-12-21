@@ -5,6 +5,7 @@ import Navigation from "./navigation";
 import SocialLinks from "./social-links";
 import * as React from "react";
 import WidgetBot from "@widgetbot/react-embed";
+import Crate from "@widgetbot/crate";
 
 type MetaType = {
   meta: {
@@ -24,6 +25,12 @@ const Header = ({ meta, nav }: MetaType) => {
   };
 
   const navEmpty = nav.length === 0;
+
+  // const crate = new Crate({
+  //   server: "223909216866402304",
+  //   channel: "549976097996013574",
+  //   shard: "https://disweb.dashflo.net"
+  // });
 
   return (
     <React.Fragment>
@@ -79,13 +86,16 @@ const Header = ({ meta, nav }: MetaType) => {
           </button>
         </div>
       </ThemeHeader>
-      <WidgetBot
-        server="223909216866402304"
-        channel="328662219086888961"
-        shard="https://disweb.dashflo.net"
-        width="100%"
-        height={300}
-      />
+      {typeof window === "undefined" ? null : (
+        <WidgetBot
+          server="223909216866402304"
+          channel="328662219086888961"
+          shard="https://disweb.dashflo.net"
+          width="100%"
+          style={{ height: 700 }}
+        />
+      )}
+      <widgetbot server="223909216866402304" channel="549976097996013574" id="embed"></widgetbot>
     </React.Fragment>
   );
 };
