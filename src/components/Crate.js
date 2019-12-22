@@ -1,5 +1,5 @@
 import React from "react";
-import Crate from "@widgetbot/crate";
+// import Crate from "@widgetbot/crate";
 
 export default class MyApp extends React.Component {
   async componentDidMount() {
