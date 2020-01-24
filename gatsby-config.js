@@ -16,6 +16,13 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-emma`,
       options: {},
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+        name: "images",
+      },
+    },
     `gatsby-plugin-mdx`,
     `gatsby-plugin-sitemap`,
     {
