@@ -4,8 +4,6 @@ import { Link } from "gatsby";
 import Navigation from "./navigation";
 import SocialLinks from "./social-links";
 import * as React from "react";
-import Crate from "../../../components/Crate";
-
 type MetaType = {
   meta: {
     [key: string]: string;
@@ -27,7 +25,6 @@ const Header = ({ meta, nav }: MetaType) => {
 
   return (
     <React.Fragment>
-      <Crate></Crate>
       <ThemeHeader>
         {!navEmpty && <Navigation nav={nav} />}
         <div
@@ -78,6 +75,12 @@ const Header = ({ meta, nav }: MetaType) => {
           >
             {isDark ? `Light` : `Dark`}
           </button>
+          <button
+            sx={{ variant: `buttons.toggle` }}
+            onClick={() => undefined}
+            type="button"
+            aria-label="Sign in"
+          >Log In</button>
         </div>
       </ThemeHeader>
     </React.Fragment>

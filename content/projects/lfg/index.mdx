@@ -17,7 +17,7 @@ How many times have you found yourself opening up an excel sheet to keep track o
 - ✅ Send reminders in DM and/or in server to everyone participating so no one forgets about the event.
 - ✅ Allow players to find other players to play with.
 - ✅ Easy signup to events with reactions.
-- ✅ Private events locked to certain roles in cases you want to make staff only events.
+- ✅ Private events locked to certain roles in case you want to make staff only events.
 - ✅ Create event templates or recurring events for easy event creation.
 - ✅ Crazy amount of customization potential to make it fit your needs!
 
@@ -120,19 +120,19 @@ Suppose we wanted to change the title of the event.
 
 <Note type="note">I will give examples using my event ID for my event, you would substitute in your own event's ID number.</Note>
 
-Under the title is the Description. Currently it reads “Join the event to let others know you will eb able to play with them at the time of the event”. Let’s change it to something more colorful!
+Under the title is the Description. Currently it reads “Join the event to let others know you will be able to play with them at the time of the event”. Let’s change it to something more colorful!
 
 <Note type="command">.eventedit 1 description If You Join it, They will come!</Note>
 
-Not only will this change the information in front of you, but it will also change the information on your event card.
+Not only will this change the information in front of you, but it will also change the information on your event card. In order to show your event card type the following command:
 
-<Note type="command">.eventadvertise</Note>
+<Note type="command">.eventadvertise 1</Note>
 
 <Note type="note">Event cards update in real time. This means whenever you edit other things in the event, the card will reflect that. I recommend using this command in a different chanel than where you use the commands.</Note>
 
 ### Event Timing
 
-Time values requires a number and then one of the time characters. The following time characters are allowed.
+Time values require a number and then one of the time characters. The following time characters are allowed.
 
 - **W** = Used to represent weeks
 - **D** = Used to represent days
@@ -170,7 +170,7 @@ Once the event is created and the event card is created, users can join the even
 
 You can manually add entire roles or users using **eventadd** command. For example, imagine you wanted to invite two teams to an event for their upcoming tournament match.
 
-<Note type="command">.eventadd 1 @Aikage <br /> .eventadd 1 @team1 @team2</Note>
+<Note type="command">.eventadd 1 @Aikage <br />.eventadd 1 @team1 @team2</Note>
 
 #### Removing/Kicking
 
@@ -195,6 +195,30 @@ Game is fairly self explanatory - what are you playing!? I’m going to play tab
 Activity is a sort of “extra box” for you to provide more information surrounding your event and the activity. Is it tournament round 1? Super Smash casual night? Since i’ll be playing Gloomhaven I’ll use this box to denote the current mission we’re on.
 
 <Note type="command">.eventedit 1 platform PC <br />.eventedit 1 game tabletop sim <br />.eventedit 1 activity mission 10</Note>
+
+### Higher Level Events Settings
+
+Now that we know how to make an event, we can change some higher level settings such as where the default event advertisement is sent, whether events are advertised by default, and which roles can make events by default.  All of this is done via the .setevents command and related subcommands.
+
+#### Setting up the default events advertisement channel
+
+If you wish to have your events auto propagate in a defined channel, you can use
+
+<Note type="command">.setevents channel #channel</Note>
+
+Whatever channel you plug into #channel will be where your events go. If you find that you no longer wish to have your events auto advertise in a channel, or you wish to handle it manually using the .eventadvertise command, you can use
+
+<Note type="command">.setevents removechannel</Note>
+
+#### Events Permissions
+
+By default only bot admins can make events. If you wish to allow other roles to make events you can use to allow that specific role to create events.
+
+<Note type="command">.setevents role @role/RoleID/RoleName</Note>
+
+If you want to reset it to where only admins/mods can create roles.
+
+<Note type="command">.setevents removerole</Note>
 
 ### More
 
