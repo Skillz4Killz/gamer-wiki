@@ -75,12 +75,12 @@ const Header = ({ meta, nav }: MetaType) => {
           >
             {isDark ? `Light` : `Dark`}
           </button>
-          <button
+          {/* <button
             sx={{ variant: `buttons.toggle` }}
             onClick={() => undefined}
             type="button"
             aria-label="Sign in"
-          >Log In</button>
+          >Log In</button> */}
         </div>
       </ThemeHeader>
     </React.Fragment>
