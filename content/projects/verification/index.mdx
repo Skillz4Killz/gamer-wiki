@@ -1,7 +1,7 @@
 ---
 client: "Verification System Guide"
 title: "Verification System Feature"
-cover: "./reactionrole.jpg"
+cover: "./verifynewbie.png"
 date: "2020-04-16"
 service: "A guide to creating the perfect system for new users joining your server."
 color: "#f1803b"
@@ -11,6 +11,9 @@ import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
 import Image from "../../../src/components/Image";
 import SetupGif from './verify.gif';
 import UnlockGif from './verifyunlock.gif';
+import EmbedSetGif from './embedset.gif';
+import EmbedEditGif from './embededit.gif';
+import RoleSetGif from './roleset.gif';
 
 # What is a Verification System?
 
@@ -32,7 +35,7 @@ The first thing to do is simply create the base of the verification system. To d
 <Note type="note">It can help to grant Gamer the Administrator permission temporarily before using this command.</Note>
 <Note type="command">.setverify setup</Note>
 
-<img src={SetupGif}></img>
+<img src={SetupGif} width="100%"></img>
 
 ### Understand What Was Done
 
@@ -58,7 +61,7 @@ When a user joins a server that has the verification system enabled, they are au
 
 Here is an example of how a new member will see your server as they complete the verification process.
 
-<img src={UnlockGif}></img>
+<img src={UnlockGif} width="100%"></img>
 
 As you can see, new members get locked out of all the channels and have to proceed by verifying in order to gain access. However, there are time when you may want to allow new members to be able to view certain channels. For example, I want to make it so that when new members join they can see my #wall channel where I post updates/announcemnts and all sorts of information. You can also do this with other channels you feel are important for newcomers like a #rules channel for instance.
 
@@ -74,10 +77,44 @@ Let's suppose you wanted something different than the base Verification Messages
 
 We start by using the `.embedset` command and build the embed the exact way we want.
 
-INSERT GIF HERE OF USING EMBEDSET TO CREATE RULES EMBED
+<img src={EmbedSetGif} width="100%"></img>
 
 Nice! We just finished creating a really cool rules embed. Now let's go ahead and edit the embed in the #verify-here channel.
 
-INSERT GIF HERE OF USING EMBEDEDIT TO EDIT EMBED
+1. In the same channel you did the `.embedset` command, find the embed you created and copy it's message ID.
+2. Type `.embedshow messageID`. This will give you a code that you will copy paste in the final step.
+3. Open the #verify-here channel
+4. Type `.embededit` but don't press enter yet.
+5. Copy the message ID of the embed in this channel we want to edit. Then paste the id so it looks something like `.embededit 739521626055507999`
+6. Now you can copy the code from step 2 and paste it. It should look something like this:
 
+<img src={EmbedEditGif} width="100%"></img>
 
+## Reaction Role Verification
+
+This section is for when you don't really want a captcha verification system but just a sweet and simple reaction role verification system.
+
+You could now convert this rule embed you created above into a reaction role. Read the [Reaction Role Guide](https://gamer.netlify.com/reaction-roles-feature).
+
+You have two options with the reaction role.
+
+1. When tapping the reaction it can remove the Verify role.
+2. When tapping the reaction it can add the Verified role or whichever role you would like your members to get showing they have read the rules and other stuff.
+
+If you choose option 2, Gamer also comes with a feature called Unique Role Sets. Basically, when a user is granted a role, you can remove every role that is in a set with that role. Let's take an example, when you are playing a game with several regions you might have roles like this:
+
+- NA
+- EA
+- EU
+- SA
+- SEA
+- CN
+
+You can use Unique Role Sets to make sure that a player never has more than 1 of these roles at any time. In regards to verification, we can do something like this where we create a roleset of the following roles:
+
+- Verify
+- Verified
+
+<img src={RoleSetGif} width="100%"></img>
+
+Now whenever someone is given the Verified role by the reaction role, Gamer bot will remove the Verify role.
