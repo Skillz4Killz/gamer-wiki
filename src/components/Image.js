@@ -25,8 +25,8 @@ const Image = props => (
       const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(props.src);
       });
+      console.log(image)
       if (!image) return null;
-
       return (
         <Img
           alt={props.alt}

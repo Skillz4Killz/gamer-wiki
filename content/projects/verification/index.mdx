@@ -1,0 +1,83 @@
+---
+client: "Verification System Guide"
+title: "Verification System Feature"
+cover: "./reactionrole.jpg"
+date: "2020-04-16"
+service: "A guide to creating the perfect system for new users joining your server."
+color: "#f1803b"
+---
+
+import Note from "../../../src/@lekoarts/gatsby-theme-emma/components/note";
+import Image from "../../../src/components/Image";
+import SetupGif from './verify.gif';
+import UnlockGif from './verifyunlock.gif';
+
+# What is a Verification System?
+
+Have you ever heard of servers being raided? Are user's alt accounts getting instant access to your server? It is time to set up some verification!
+
+- ✅ Lock access to the server for all new users until verified.
+- ✅ Captcha verification
+- ✅ Simple reaction to unlock server or step by step walkthrough process.
+- ✅ Enforce users reading and agreeing to your rules before they gain access to your server.
+- ✅ Multiple customizable welcome messages
+- ✅ Auto-Role system without breaking Verified Server Discord Guidelines
+
+Gamer's Verification system was designed in a manner which allowed maximum customizability as every server is unique. This can lead to a little confusion because of how many settings/features are involved. Let's simply take it step by step and find out how easy it really is.
+
+## Basic Verification Setup
+
+The first thing to do is simply create the base of the verification system. To do this:
+
+<Note type="note">It can help to grant Gamer the Administrator permission temporarily before using this command.</Note>
+<Note type="command">.setverify setup</Note>
+
+<img src={SetupGif}></img>
+
+### Understand What Was Done
+
+Gamer has created an entire basic verification system for you that can be used for any general purpose server. There were a lot of things that this command does behind the scene so let's break it down.
+
+- ✅ Created a category called Verification Zone, the name may be different if you use a different language.
+  - ✅ Created a channel inside that category called, #verify-here. Once again the name of the channel will depend on your server's language.
+  - ✅ Hide this category and all future channels in this category from everyone. But allow Gamer, bot admins, bot mods, and the Verify role to be able to view these channels.
+- ✅ Created a Verify role on your server.
+- ✅ Edited every "necessary" channels on your server to prevent viewing the channel if the user has the Verify role.
+  - ✅ Whenever new channels are created, they will also be automatically updated to prevent new users from seeing them. A lot of bot's don't take this into consideration but Gamer does! We make sure that you don't need to be manually updating channels in the future.
+
+<Note type="note">This is why we recommend giving Gamer Admin perms before using this command. You can remove it again once it is done. This allows Gamer to edit all channels.</Note>
+
+- ✅ Setup a pretty basic embed message inside the #verify-here channel that will welcome users and then tell them to begin by typing .verify
+- ✅ Setup a pretty custom first message response. This message is sent in the channel that is created whenever a user uses the .verify command.
+
+### Understanding The User Perspective
+
+When a user joins a server that has the verification system enabled, they are automatically given the @Verify role. Once they get this role, they are immediately locked from accessing anything outside of the Verification Category.
+
+<Image src="verifynewbie.png" />
+
+Here is an example of how a new member will see your server as they complete the verification process.
+
+<img src={UnlockGif}></img>
+
+As you can see, new members get locked out of all the channels and have to proceed by verifying in order to gain access. However, there are time when you may want to allow new members to be able to view certain channels. For example, I want to make it so that when new members join they can see my #wall channel where I post updates/announcemnts and all sorts of information. You can also do this with other channels you feel are important for newcomers like a #rules channel for instance.
+
+Simply edit the channels permission and remove the Verify role's overwrite.
+
+<Image src="verifywall.png" />
+
+🎉 Now they can see exactly what I wanted them to be able to see. This makes it so that when I make any @everyone announcement, even users that have not verified will also be notified. 💪
+
+## Customizing The Base
+
+Let's suppose you wanted something different than the base Verification Messages. For example, you wanted a special unique embed as the welcome message to showcase your rules.
+
+We start by using the `.embedset` command and build the embed the exact way we want.
+
+INSERT GIF HERE OF USING EMBEDSET TO CREATE RULES EMBED
+
+Nice! We just finished creating a really cool rules embed. Now let's go ahead and edit the embed in the #verify-here channel.
+
+INSERT GIF HERE OF USING EMBEDEDIT TO EDIT EMBED
+
+
