@@ -13,7 +13,8 @@ import SetupGif from './verify.gif';
 import UnlockGif from './verifyunlock.gif';
 import EmbedSetGif from './embedset.gif';
 import EmbedEditGif from './embededit.gif';
-import RoleSetGif from './roleset.gif';
+import RoleSetCreateGif from './rolesetcreate.gif';
+import RoleSetsGif from './rolesets.gif';
 
 # What is a Verification System?
 
@@ -71,6 +72,10 @@ Simply edit the channels permission and remove the Verify role's overwrite.
 
 🎉 Now they can see exactly what I wanted them to be able to see. This makes it so that when I make any @everyone announcement, even users that have not verified will also be notified. 💪
 
+Now for the default system, the user can join and type `.verify` to begin the process. This will make a new channel with their name under the verification category and also delete all messages on that channel except the first message in that channel it finds. This will automatically keep the verify channel clean for you so when new users join they will see the instructions right away.
+
+<Note type="note">The channels that the users created, will delete after 10 minutes of inactivity to help keep the server clean. They will need to restart the process by typing `.verify` again in the #verify-here channel.</Note>
+
 ## Customizing The Base
 
 Let's suppose you wanted something different than the base Verification Messages. For example, you wanted a special unique embed as the welcome message to showcase your rules.
@@ -115,6 +120,8 @@ You can use Unique Role Sets to make sure that a player never has more than 1 of
 - Verify
 - Verified
 
-<img src={RoleSetGif} width="100%"></img>
+<img src={RoleSetCreateGif} width="100%"></img>
 
 Now whenever someone is given the Verified role by the reaction role, Gamer bot will remove the Verify role.
+
+<img src={RoleSetsGif} width="100%"></img>
