@@ -9,7 +9,7 @@ type Props = {
   }[];
 };
 
-const Navigation = ({ nav }: Props) => (
+export const Navigation = ({ nav }: Props) => (
   <Flex
     as="nav"
     sx={{

@@ -1,6 +1,6 @@
 import React from "react";
 
-const SocialLinks = () => (
+export const SocialLinks = () => (
   <>
     <a href="https://discord.gg/J4NqJ72" target="_blank" rel="noopener noreferrer" aria-label="Discord">
       <svg

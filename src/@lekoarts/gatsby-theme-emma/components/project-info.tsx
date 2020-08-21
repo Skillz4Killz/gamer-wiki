@@ -10,7 +10,7 @@ type ProjectInfoProps = {
   };
 };
 
-const ProjectInfo = ({ project }: ProjectInfoProps) => (
+export const ProjectInfo = ({ project }: ProjectInfoProps) => (
   <Flex sx={{ mt: 4, mb: [2, 4], flexWrap: `wrap` }}>
     <Item name="Title" content={project.client} />
     <Item name="Updated At" content={project.date} />

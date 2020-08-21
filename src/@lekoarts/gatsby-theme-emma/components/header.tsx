@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Header as ThemeHeader, jsx, useColorMode, Styled } from "theme-ui";
+import { Flex, jsx, useColorMode, Link as TLink } from "theme-ui";
 import { Link } from "gatsby";
 import Navigation from "./navigation";
 import SocialLinks from "./social-links";
@@ -14,7 +14,7 @@ type MetaType = {
   }[];
 };
 
-const Header = ({ meta, nav }: MetaType) => {
+export const Header = ({ meta, nav }: MetaType) => {
   const [colorMode, setColorMode] = useColorMode();
   const isDark = colorMode === `dark`;
   const toggleColorMode = (e: any) => {
@@ -25,7 +25,7 @@ const Header = ({ meta, nav }: MetaType) => {
 
   return (
     <React.Fragment>
-      <ThemeHeader>
+      <Flex as="header" variant="layout.header">
         {!navEmpty && <Navigation nav={nav} />}
         <div
           sx={{
@@ -34,17 +34,17 @@ const Header = ({ meta, nav }: MetaType) => {
             display: `flex`,
             flex: navEmpty ? 1 : [`1 0 100%`, 1],
             justifyContent: navEmpty ? `flex-start` : `center`,
-            order: [1, 2]
+            order: [1, 2],
           }}
         >
-          <Styled.a
+          <TLink
             aria-label={`${meta.siteTitle}, Back to homepage`}
             as={Link}
             sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
             to="/"
           >
             {meta.siteTitle}
-          </Styled.a>
+          </TLink>
         </div>
         <div
           sx={{
@@ -54,16 +54,16 @@ const Header = ({ meta, nav }: MetaType) => {
               display: `flex`,
               alignItems: `center`,
               "&:hover": {
-                color: `primary`
+                color: `primary`,
               },
               "&:not(:first-of-type)": {
-                ml: 2
-              }
+                ml: 2,
+              },
             },
             justifyContent: `flex-end`,
             flex: 1,
             display: `flex`,
-            order: 3
+            order: 3,
           }}
         >
           <SocialLinks />
@@ -82,7 +82,7 @@ const Header = ({ meta, nav }: MetaType) => {
             aria-label="Sign in"
           >Log In</button> */}
         </div>
-      </ThemeHeader>
+      </Flex>
     </React.Fragment>
   );
 };

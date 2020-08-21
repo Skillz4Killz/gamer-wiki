@@ -106,7 +106,7 @@ The **#** refers to the ID number of the event. If you don’t know the ID, use 
 
 Once you are ready to create an event, you can go ahead and use the following command.
 
-<Note type="command">.eventcreate</Note>
+<img src="https://i.imgur.com/KkvU84v.gif" width="100%"></img>
 
 Tada! Your very first event was just created. Gamer automatically uses the default event settings for this event, so let's go ahead and customize the event.
 
@@ -116,15 +116,21 @@ Tada! Your very first event was just created. Gamer automatically uses the defau
 
 Suppose we wanted to change the title of the event.
 
+<img src="https://i.imgur.com/b49yNkJ.gif" width="100%"></img>
+
 <Note type="command">.eventedit 1 title Here's a Brand New Title!</Note>
 
 <Note type="note">I will give examples using my event ID for my event, you would substitute in your own event's ID number.</Note>
 
 Under the title is the Description. Currently it reads “Join the event to let others know you will be able to play with them at the time of the event”. Let’s change it to something more colorful!
 
+<img src="https://i.imgur.com/YYgYZvX.gif" width="100%"></img>
+
 <Note type="command">.eventedit 1 description If You Join it, They will come!</Note>
 
 Not only will this change the information in front of you, but it will also change the information on your event card. In order to show your event card type the following command:
+
+<img src="https://i.imgur.com/Hxrwoil.gif" width="100%"></img>
 
 <Note type="command">.eventadvertise 1</Note>
 
@@ -151,11 +157,15 @@ For example:
 
 Now let's try and update the duration of the event. Let's change the duration of the event to last for 2 hours.
 
+<img src="https://i.imgur.com/6PrN1wZ.gif" width="100%"></img>
+
 <Note type="command">.eventedit 1 duration 2h</Note>
 
 #### Start Time
 
 By default, events will always start 1 hour from when the command to create the event was used. Let's set up our own start time so the event starts in 18 hours from now.
+
+<img src="https://i.imgur.com/6PrN1wZ.gif" width="100%"></img>
 
 <Note type="command">.eventedit 1 start 18h</Note>
 
@@ -164,11 +174,19 @@ The start time is always calculated from your current time. This was changed to 
 ### RSVP
 
 #### Adding/Joining/Denying
+
 Once the event is created and the event card is created, users can join the event anytime. Users can tap the ✅ reaction or the ❌ on the event card.
+
+<img src="https://i.imgur.com/iKaUFKU.gif" width="100%"></img>
+<img src="https://i.imgur.com/KqOc37L.gif" width="100%"></img>
 
 <Note type="note">Alternatively, they can use .eventjoin 1 to join, or .eventdeny 1 to leave or decline the event.</Note>
 
+<img src="https://i.imgur.com/UeDc5QW.gif" width="100%"></img>
+
 You can manually add entire roles or users using **eventadd** command. For example, imagine you wanted to invite two teams to an event for their upcoming tournament match.
+
+<img src="https://i.imgur.com/jHdfVRf.gif" width="100%"></img>
 
 <Note type="command">.eventadd 1 @Aikage <br />.eventadd 1 @team1 @team2</Note>
 
@@ -176,11 +194,15 @@ You can manually add entire roles or users using **eventadd** command. For examp
 
 If you need to remove someone from the event for whatever reason:
 
+<img src="https://i.imgur.com/QwGuHWa.gif" width="100%"></img>
+
 <Note type="command">.eventkick 1 @Aikage</Note>
 
 #### Max Attendees Limit
 
 You can change the number of people allowed to attend the event. For example, if we wanted to make a 5v5 event we only need a maximum of 10 members.
+
+<img src="https://i.imgur.com/bJaJ6KU.gif" width="100%"></img>
 
 <Note type="command">.eventedit 1 attendees 10</Note>
 
@@ -190,9 +212,15 @@ All three of the below options are freeform so you can type anything you like. F
 
 Platform will change which venue that the event is being hosted on. I’ll change this to PC for now.
 
+<img src="https://i.imgur.com/jFuyTcO.gif" width="100%"></img>
+
 Game is fairly self explanatory - what are you playing!? I’m going to play tabletop simulator with my friends.
 
+<img src="https://i.imgur.com/BOHUmTf.gif" width="100%"></img>
+
 Activity is a sort of “extra box” for you to provide more information surrounding your event and the activity. Is it tournament round 1? Super Smash casual night? Since i’ll be playing Gloomhaven I’ll use this box to denote the current mission we’re on.
+
+<img src="https://i.imgur.com/k9xm0MI.gif" width="100%"></img>
 
 <Note type="command">.eventedit 1 platform PC <br />.eventedit 1 game tabletop sim <br />.eventedit 1 activity mission 10</Note>
 
@@ -204,9 +232,13 @@ Now that we know how to make an event, we can change some higher level settings 
 
 If you wish to have your events auto propagate in a defined channel, you can use
 
+<img src="https://i.imgur.com/pfH56sA.gif" width="100%"></img>
+
 <Note type="command">.setevents channel #channel</Note>
 
 Whatever channel you plug into #channel will be where your events go. If you find that you no longer wish to have your events auto advertise in a channel, or you wish to handle it manually using the .eventadvertise command, you can use
+
+<img src="https://i.imgur.com/3kOspGr.gif" width="100%"></img>
 
 <Note type="command">.setevents removechannel</Note>
 
@@ -214,9 +246,13 @@ Whatever channel you plug into #channel will be where your events go. If you fin
 
 By default only bot admins can make events. If you wish to allow other roles to make events you can use to allow that specific role to create events.
 
+<img src="https://i.imgur.com/QFllKHP.gif" width="100%"></img>
+
 <Note type="command">.setevents role @role/RoleID/RoleName</Note>
 
 If you want to reset it to where only admins/mods can create roles.
+
+<img src="https://i.imgur.com/OT5tq9G.gif" width="100%"></img>
 
 <Note type="command">.setevents removerole</Note>
 

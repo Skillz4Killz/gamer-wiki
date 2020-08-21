@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { Footer as ThemeFooter, Flex, jsx } from "theme-ui";
-
-const Footer = () => (
-  <ThemeFooter>
+import { Box, Link, Flex, jsx } from "theme-ui";
+export const Footer = () => (
+  <Box as="footer" variant="layout.footer">
     Copyright &copy; {new Date().getFullYear()}. All rights reserved.
     <br />
     <Flex
@@ -12,10 +11,10 @@ const Footer = () => (
         mt: 3,
         color: `text`,
         fontWeight: `semibold`,
-        a: { color: `text` }
+        a: { color: `text` },
       }}
     />
-  </ThemeFooter>
+  </Box>
 );
 
 export default Footer;
