@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-emma": "^1.4.11",
-    "gatsby": "^2.24.47",
+    "gatsby": "^5.9.0",
     "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-mdx": "^1.2.34",
     "gatsby-plugin-netlify": "^2.3.13",
